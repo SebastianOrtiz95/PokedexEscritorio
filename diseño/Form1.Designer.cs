@@ -214,6 +214,7 @@
             this.txtFiltroAvanzado.Name = "txtFiltroAvanzado";
             this.txtFiltroAvanzado.Size = new System.Drawing.Size(659, 20);
             this.txtFiltroAvanzado.TabIndex = 8;
+            this.txtFiltroAvanzado.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtFiltroAvanzado_KeyPress);
             // 
             // btnBuscarFiltro
             // 

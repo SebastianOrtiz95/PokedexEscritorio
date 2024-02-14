@@ -175,6 +175,25 @@ namespace diseño
             }
         }
         #endregion
+
+        private void txtFiltroAvanzado_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                List<Pokemon> listaFiltrada = new List<Pokemon>();
+                string filtro = txtFiltroAvanzado.Text;
+                listaFiltrada = PokemonLista.FindAll(x => x.Nombre.ToLower().Contains(filtro.ToLower()) || x.Tipo.Descripcion.ToLower().Contains(filtro.ToLower()));
+
+                if (filtro != "")
+                {
+                    dgvPokemon.DataSource = listaFiltrada;
+                }
+                else
+                {
+                    dgvPokemon.DataSource = PokemonLista;
+                }
+            }
+        }
     }
 }
 
