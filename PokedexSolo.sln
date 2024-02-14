@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34024.191
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "diseño", "diseño\diseño.csproj", "{CE2F3000-B4B3-4B71-9673-E5470A5D3EFF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dominio", "Dominio\Dominio.csproj", "{B1AA592D-B378-4BBF-9C80-9223464485CA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Negocio", "Negocio\Negocio.csproj", "{F3219F57-9A44-4375-B38B-A70011BBC329}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CE2F3000-B4B3-4B71-9673-E5470A5D3EFF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CE2F3000-B4B3-4B71-9673-E5470A5D3EFF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CE2F3000-B4B3-4B71-9673-E5470A5D3EFF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CE2F3000-B4B3-4B71-9673-E5470A5D3EFF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B1AA592D-B378-4BBF-9C80-9223464485CA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B1AA592D-B378-4BBF-9C80-9223464485CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B1AA592D-B378-4BBF-9C80-9223464485CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B1AA592D-B378-4BBF-9C80-9223464485CA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F3219F57-9A44-4375-B38B-A70011BBC329}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F3219F57-9A44-4375-B38B-A70011BBC329}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F3219F57-9A44-4375-B38B-A70011BBC329}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F3219F57-9A44-4375-B38B-A70011BBC329}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B115FAD3-BF88-4F94-A251-90470A59E73B}
+	EndGlobalSection
+EndGlobal
