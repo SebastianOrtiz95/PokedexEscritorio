@@ -22,59 +22,30 @@ namespace diseño
             InitializeComponent();
         }
 
-        
+        #region eventos
         private void pbxCerrar_Click(object sender, EventArgs e)
         {
             this.Close();
         }
-
         private void pbxMinimizar_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
         }
-
         private void FrmPokemon_Load(object sender, EventArgs e)
         {
-            cargar();
+            cargarGrilla();
         }
-        private void cargar()
-        {
-            Negocio = new PokemonNegocio();
-            PokemonLista = Negocio.listar();
-            dgvPokemon.DataSource =PokemonLista;
-            dgvPokemon.Columns["UrlImagen"].Visible = false;
-            dgvPokemon.Columns["id"].Visible = false;
-            //dgvPokemon.Columns["UrlImagen"].Visible = false;
-        }
-
         private void dgvPokemon_SelectionChanged(object sender, EventArgs e)
         {
-            Pokemon seleccionado =(Pokemon)dgvPokemon.CurrentRow.DataBoundItem;
+            Pokemon seleccionado = (Pokemon)dgvPokemon.CurrentRow.DataBoundItem;
             cargarImagen(seleccionado.UrlImagen);
         }
-        private void cargarImagen(string imagen)
-        {
-            try
-            {
-                pbxPokemon.Load(imagen);
-                //pbxPokemon.SizeMode = PictureBoxSizeMode.StretchImage;
-            }
-            catch (Exception)
-            {
-
-                pbxPokemon.Load("https://img.freepik.com/vector-gratis/dibujo-problemas-tecnicos-ordenador_23-2147503369.jpg?w=2000");
-                pbxPokemon.SizeMode=PictureBoxSizeMode.Zoom;
-                //MostrarSinImagen();
-            }
-        }
-
         private void btnAgregar_Click(object sender, EventArgs e)
         {
             FrmAltaPokemon altaPokemon = new FrmAltaPokemon();
             altaPokemon.ShowDialog();
-            cargar();
+            cargarGrilla();
         }
-
         private void btnModificar_Click(object sender, EventArgs e)
         {
             try
@@ -83,63 +54,28 @@ namespace diseño
                 Pokemon seleccionado = (Pokemon)dgvPokemon.CurrentRow.DataBoundItem;
                 FrmAltaPokemon modificarPokemon = new FrmAltaPokemon(seleccionado);
                 modificarPokemon.ShowDialog();
-                cargar();
+                cargarGrilla();
             }
             catch (Exception ex)
             {
 
                 MessageBox.Show(ex.ToString());
             }
-           
-        }
 
+        }
         private void btnEliminar_Click(object sender, EventArgs e)
         {
             if (validarSeleccionado()) return;
             eliminar();
-            cargar();
-           
+            cargarGrilla();
+
         }
         private void btnEliminarLogico_Click(object sender, EventArgs e)
         {
             if (validarSeleccionado()) return;
             eliminar(true);
-            cargar();
+            cargarGrilla();
         }
-        private void eliminar(bool logico=false)
-        {
-            
-            Negocio = new PokemonNegocio();
-            try
-            {
-                Pokemon seleccionado = (Pokemon)dgvPokemon.CurrentRow.DataBoundItem;
-                if (logico)
-                {
-                    DialogResult = MessageBox.Show("Esta seguro de eliminar","ELIMINANDO",MessageBoxButtons.YesNo,MessageBoxIcon.Warning);
-                    if (DialogResult == DialogResult.Yes)
-                    {
-                        Negocio.eliminarLogico(seleccionado);
-                        MessageBox.Show("eliminado exitosamente");
-                    }
-                }
-                else
-                {
-                    DialogResult = MessageBox.Show("Esta seguro de eliminar", "ELIMINANDO", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-                    if (DialogResult == DialogResult.Yes)
-                    {
-                        Negocio.eliminarFisico(seleccionado);
-                        MessageBox.Show("eliminado exitosamente");
-                    }
-                }
-                
-            }
-            catch (Exception ex)
-            {
-
-                MessageBox.Show(ex.ToString());
-            }
-        }
-
         private void btnBuscarFiltro_Click(object sender, EventArgs e)
         {
             List<Pokemon> listaFiltrada = new List<Pokemon>();
@@ -165,6 +101,22 @@ namespace diseño
             //dgvPokemon.DataSource = null;
             //dgvPokemon.DataSource = listaFiltrada;
         }
+       
+        #endregion
+        #region metodosPropios
+        private void cargarGrilla()
+        {
+            Negocio = new PokemonNegocio();
+            PokemonLista = Negocio.listar();
+            dgvPokemon.DataSource = PokemonLista;
+            ocultarColumnas();
+            //dgvPokemon.Columns["UrlImagen"].Visible = false;
+        }
+        private void ocultarColumnas()
+        {
+            dgvPokemon.Columns["UrlImagen"].Visible = false;
+            dgvPokemon.Columns["id"].Visible = false;
+        }
         private bool validarSeleccionado()
         {
             if (dgvPokemon.CurrentRow == null)
@@ -174,5 +126,65 @@ namespace diseño
             }
             return false;
         }
+        private void cargarImagen(string imagen)
+        {
+            try
+            {
+                pbxPokemon.Load(imagen);
+                //pbxPokemon.SizeMode = PictureBoxSizeMode.StretchImage;
+            }
+            catch (Exception)
+            {
+
+                pbxPokemon.Load("https://img.freepik.com/vector-gratis/dibujo-problemas-tecnicos-ordenador_23-2147503369.jpg?w=2000");
+                pbxPokemon.SizeMode = PictureBoxSizeMode.Zoom;
+                //MostrarSinImagen();
+            }
+        }
+        private void eliminar(bool logico = false)
+        {
+
+            Negocio = new PokemonNegocio();
+            try
+            {
+                Pokemon seleccionado = (Pokemon)dgvPokemon.CurrentRow.DataBoundItem;
+                if (logico)
+                {
+                    DialogResult = MessageBox.Show("Esta seguro de eliminar", "ELIMINANDO", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                    if (DialogResult == DialogResult.Yes)
+                    {
+                        Negocio.eliminarLogico(seleccionado);
+                        MessageBox.Show("eliminado exitosamente");
+                    }
+                }
+                else
+                {
+                    DialogResult = MessageBox.Show("Esta seguro de eliminar", "ELIMINANDO", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                    if (DialogResult == DialogResult.Yes)
+                    {
+                        Negocio.eliminarFisico(seleccionado);
+                        MessageBox.Show("eliminado exitosamente");
+                    }
+                }
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.ToString());
+            }
+        }
+        #endregion
     }
 }
+
+
+
+
+
+
+
+
+
+
+
