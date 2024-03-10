@@ -1,0 +1,6 @@
+E:\videos c# nivel2\PokedexSolo\Dominio\bin\Debug\Dominio.dll
+E:\videos c# nivel2\PokedexSolo\Dominio\bin\Debug\Dominio.pdb
+E:\videos c# nivel2\PokedexSolo\Dominio\obj\Debug\Dominio.csproj.AssemblyReference.cache
+E:\videos c# nivel2\PokedexSolo\Dominio\obj\Debug\Dominio.csproj.CoreCompileInputs.cache
+E:\videos c# nivel2\PokedexSolo\Dominio\obj\Debug\Dominio.dll
+E:\videos c# nivel2\PokedexSolo\Dominio\obj\Debug\Dominio.pdb

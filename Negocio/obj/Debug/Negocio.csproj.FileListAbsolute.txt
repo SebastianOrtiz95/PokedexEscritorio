@@ -1,0 +1,9 @@
+E:\videos c# nivel2\PokedexSolo\Negocio\bin\Debug\Negocio.dll
+E:\videos c# nivel2\PokedexSolo\Negocio\bin\Debug\Negocio.pdb
+E:\videos c# nivel2\PokedexSolo\Negocio\bin\Debug\Dominio.dll
+E:\videos c# nivel2\PokedexSolo\Negocio\bin\Debug\Dominio.pdb
+E:\videos c# nivel2\PokedexSolo\Negocio\obj\Debug\Negocio.csproj.AssemblyReference.cache
+E:\videos c# nivel2\PokedexSolo\Negocio\obj\Debug\Negocio.csproj.CoreCompileInputs.cache
+E:\videos c# nivel2\PokedexSolo\Negocio\obj\Debug\Negocio.csproj.CopyComplete
+E:\videos c# nivel2\PokedexSolo\Negocio\obj\Debug\Negocio.dll
+E:\videos c# nivel2\PokedexSolo\Negocio\obj\Debug\Negocio.pdb

@@ -93,9 +93,9 @@ namespace Negocio
             }
             catch (Exception ex)
             {
-
                 throw ex;
             }finally { datos.cerrarConexion();}
+
         }
         public void eliminarFisico(Pokemon eliminado)
         {

@@ -1,0 +1,16 @@
+E:\videos c# nivel2\PokedexSolo\diseño\bin\Debug\diseño.exe.config
+E:\videos c# nivel2\PokedexSolo\diseño\bin\Debug\diseño.exe
+E:\videos c# nivel2\PokedexSolo\diseño\bin\Debug\diseño.pdb
+E:\videos c# nivel2\PokedexSolo\diseño\obj\Debug\diseño.csproj.AssemblyReference.cache
+E:\videos c# nivel2\PokedexSolo\diseño\obj\Debug\diseño.FrmPokemon.resources
+E:\videos c# nivel2\PokedexSolo\diseño\obj\Debug\diseño.Properties.Resources.resources
+E:\videos c# nivel2\PokedexSolo\diseño\obj\Debug\diseño.csproj.GenerateResource.cache
+E:\videos c# nivel2\PokedexSolo\diseño\obj\Debug\diseño.csproj.CoreCompileInputs.cache
+E:\videos c# nivel2\PokedexSolo\diseño\obj\Debug\diseño.exe
+E:\videos c# nivel2\PokedexSolo\diseño\obj\Debug\diseño.pdb
+E:\videos c# nivel2\PokedexSolo\diseño\bin\Debug\Dominio.dll
+E:\videos c# nivel2\PokedexSolo\diseño\bin\Debug\Negocio.dll
+E:\videos c# nivel2\PokedexSolo\diseño\bin\Debug\Dominio.pdb
+E:\videos c# nivel2\PokedexSolo\diseño\bin\Debug\Negocio.pdb
+E:\videos c# nivel2\PokedexSolo\diseño\obj\Debug\diseño.csproj.CopyComplete
+E:\videos c# nivel2\PokedexSolo\diseño\obj\Debug\diseño.FrmAltaPokemon.resources
